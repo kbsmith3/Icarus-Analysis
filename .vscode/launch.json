@@ -1,0 +1,55 @@
+/*
+{
+  "configurations": [
+    
+    {
+      "name": "C/C++: g++-13 build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: g++-13 build active file"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/kevinsmith/Desktop/WORK/Code",
+      "program": "/Users/kevinsmith/Desktop/WORK/Code/build/Debug/outDebug"
+    }
+  ],
+  "version": "2.0.0"
+}
+*/
+{
+  "version": "2.0.0",
+  "configurations": [
+      {
+          "name": "Debug",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}/a.out",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": false,
+          "MIMode": "lldb",
+          "setupCommands": [
+              {
+                  "description": "Enable pretty-printing for lldb",
+                  "text": "-enable-pretty-printing",
+                  "ignoreFailures": true
+              }
+          ],
+          "preLaunchTask": "build my project",
+          "miDebuggerPath": "/usr/bin/lldb"
+      }
+  ]
+}
